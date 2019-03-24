@@ -1,0 +1,14 @@
+#Fixing dates to end of month
+d = ['2012-12-01','2012-02-01','2014-12-01']
+df = pd.DataFrame({'Date':d})
+df['Date'] = pd.to_datetime(df['Date'])
+date_c = []
+for row in pd.DatetimeIndex(df['Date']):
+    a = row.year
+    b = row.month
+    c = calendar.monthrange(a,b)[1]
+    date_c.append(datetime(a, b, c))
+
+df['Date'] = date_c
+df['Date']
+    

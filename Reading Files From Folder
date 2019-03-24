@@ -1,0 +1,11 @@
+# can be used to upload dataframe
+
+path = os.getcwd()
+files = os.listdir(path)
+files_xlsx = [f for f in files if f[-4:] =='xlsx']
+files_xlsx
+
+for f in files_xlsx:
+    a = re.findall(r'\w+', f)
+    a = a[0]
+    print(a)

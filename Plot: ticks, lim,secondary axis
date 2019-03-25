@@ -1,0 +1,33 @@
+#automatic xticks with x unique value
+https://campus.datacamp.com/courses/foundations-of-predictive-analytics-in-python-part-1/interpreting-and-explaining-models?ex=14
+xticks - create x label with array 0, 1, 2 and match to the list of country India, UK, USA
+xlim = width
+
+pig_table:
+ Incidence   Size country
+0   0.050934  49849   India
+1   0.050512  10057      UK
+2   0.048486  40094     USA
+    
+# The function to plot a predictor insight graph
+def plot_pig(pig_table, variable):
+    
+    # Plot formatting
+    plt.ylabel("Size", rotation=0, rotation_mode="anchor", ha="right")
+    
+    # Plot the bars with sizes 
+    pig_table["Size"].plot(kind="bar", width=0.5, color="lightgray", edgecolor="none") 
+    
+    # Plot the incidence line on secondary axis
+    pig_table["Incidence"].plot(secondary_y=True)
+    
+    # Plot formatting
+    plt.xticks(np.arange(len(pig_table)), pig_table[variable])
+    plt.xlim([-0.5, len(pig_table) - 0.5])
+    plt.ylabel("Incidence", rotation=0, rotation_mode="anchor", ha="left")
+    
+    # Show the graph
+    plt.show()
+    
+# Apply the function for the variable "country"
+plot_pig(pig_table, "country")

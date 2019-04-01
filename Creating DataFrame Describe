@@ -1,0 +1,7 @@
+df_stats = df.describe().T
+
+#To calculate Null or other stats on the columns:
+null_list = []
+for col in df:
+  null = df[col].isnull().sum().sum()
+  null_list.append(null)

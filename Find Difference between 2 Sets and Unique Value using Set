@@ -1,8 +1,10 @@
 #https://www.programiz.com/python-programming/methods/set/difference
 
 #Creating set of numbers:
+#set function also create unique values
 set1 = set(df['columns'] #or you can create a set manually
 set2 = set(df2['columns']
 
 #elements unique in set1 but not in set2
 unique_to_set1 = set1.difference(set2)
+

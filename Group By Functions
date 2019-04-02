@@ -1,0 +1,3 @@
+#Finding last value
+
+df_last = df.groupby('id')['amount'].last().reset_index()

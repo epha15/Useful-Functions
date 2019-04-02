@@ -1,0 +1,15 @@
+#Using datetime.date function to capture data after/before certain date time
+
+start_date = datetime.date(2017, 1, 1)
+end_date = datetime.date(2017,12,31)
+df = df[(df['date_column'] > start_date) & (df['date_column'] < end_date)]
+
+#Calculating days from reference date
+df['new_#days_column'] = end_date - df['date_column']
+
+#Finding the last date
+df_group = df.groupby('id')['date_column'].max().reset_index()
+
+
+
+

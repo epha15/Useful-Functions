@@ -1,0 +1,13 @@
+#winsorize
+from scipy.stats.mstats import winsorize
+df['column_winsorized'] = winsorize(df['column'],limits=[lower_percentile_limit,upper_percentile_limit])
+
+#standrad deviation
+mean_col = df['col'].mean()
+std_col = df['col'].std()
+
+lower_limit = mean_col - 3* std_col
+upper_limit = mean_col + 3* std_col
+
+#combining with list comprehension
+df['col_modified'] = (pd.Series([min(max(a,lower_limit),upper_limit) for a df['col']]))

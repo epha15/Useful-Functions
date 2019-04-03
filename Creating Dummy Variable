@@ -1,5 +1,6 @@
 #Logit Regression require continuous variables. Hence, categorical data needs to be transformed into dummy variables
 #It is important to remove one of the dummy variables to prevent multicollinearity - drop_first args
 
-pd.get_dummies(df["categorical_column"],drop_first=True)
+df_dummy = pd.get_dummies(df["categorical_column"],drop_first=True)
+#this will dataframe
 

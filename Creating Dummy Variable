@@ -2,5 +2,11 @@
 #It is important to remove one of the dummy variables to prevent multicollinearity - drop_first args
 
 df_dummy = pd.get_dummies(df["categorical_column"],drop_first=True)
-#this will dataframe
+#this will create a dataframe
+
+#adding dummy variable(s) to original dataframe
+df = pd.concat([df,df_dummy], axis=1)
+
+#Since we have continous categorical column (dummy variable), we need to remove the original variable
+del df['categorical_column']
 

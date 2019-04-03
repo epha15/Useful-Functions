@@ -1,0 +1,3 @@
+#http://pandas.pydata.org/pandas-docs/version/0.15.0/generated/pandas.qcut.html
+
+pandas.qcut(x, q, labels=None, retbins=False, precision=3)

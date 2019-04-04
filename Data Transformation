@@ -1,0 +1,4 @@
+#Take Log - useful when you have variables that can go from very small to very large
+df['variable_log'] = np.log(df['variable'])
+
+#Interactions: A variable may not have a strong predictive power, but when combined with other variable, it can improve its predictive power

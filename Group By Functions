@@ -1,3 +1,9 @@
-#Finding last value
-
+#Finding last value for certain identifier. Id can be replaced by categorical variable (e.g. grouping by month, State, etc)
 df_last = df.groupby('id')['amount'].last().reset_index()
+
+#grouping to find mean
+df_mean = df.groupby('categorical_variable')['numerical_variable'].mean().reset_index()
+.max
+.median
+.size = count
+

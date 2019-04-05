@@ -1,0 +1,6 @@
+#Creating Date
+import datetime
+date = datetime.date(2018,5,1)
+
+#Adding 1 day
+date = date + datetime.timedelta(days=1)

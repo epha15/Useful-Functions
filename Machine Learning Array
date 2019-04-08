@@ -1,0 +1,6 @@
+If we're missing an axis, use .reshape():
+
+array.shape 
+(10,) #this shape need to be reshaped.
+array.reshape([-1, 1]).shape
+(10, 1)

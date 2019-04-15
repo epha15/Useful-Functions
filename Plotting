@@ -1,0 +1,5 @@
+# Scatterplot with color relating to time. prices = index is the time. This data goes from 2010 to 2015 and display 6 colors
+prices.plot.scatter('EBAY', 'YHOO', c=np.arange(len(prices.index)), 
+                    cmap=plt.cm.viridis, colorbar=False)
+plt.show()
+
